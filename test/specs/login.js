@@ -71,6 +71,7 @@ credentials.forEach(({ username, password, invusername, invpassword }) => {
       await logout_Fn.logout();
       console.log('hi');
       console.log('hi');
+      console.log('hi');
     });
 
     it.only("Login with inValid credentials to OrangeHRM", async () => {
