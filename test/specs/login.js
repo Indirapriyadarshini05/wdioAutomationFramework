@@ -69,10 +69,7 @@ credentials.forEach(({ username, password, invusername, invpassword }) => {
       await expectChai(text).to.equal("Employee Information");
       await navBar.leftNav_Admin();
       await logout_Fn.logout();
-      console.log('hi');
-      console.log('hi');
-      console.log('hi');
-      console.log('hi nithu');
+     
     });
 
     it.only("Login with inValid credentials to OrangeHRM", async () => {
