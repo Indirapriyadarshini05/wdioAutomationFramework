@@ -1,0 +1,2 @@
+
+Test  File for reading text file using webdriverio with js
