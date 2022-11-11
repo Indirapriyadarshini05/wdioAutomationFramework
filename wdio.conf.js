@@ -1,5 +1,4 @@
 const chance = require("chance").Chance();
-const rnd = chance.natural({ min: 0, max: 1000 });
 const date = new Date();
 let time = date.getHours() + "." + date.getMinutes();
 let monthname = date.toLocaleString('en-us', { month: 'short' });
@@ -119,6 +118,7 @@ exports.config = {
 
     //services: ['chromedriver'],
     services: ['selenium-standalone'],
+   
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

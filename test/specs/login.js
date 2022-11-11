@@ -27,7 +27,7 @@ const password = chance.string({
 credentials.forEach(({ username, password, invusername, invpassword }) => {
 
   describe("Login to the Application", () => {
-    it("Verifiying the Title and Text", async () => {
+    it.only("Verifiying the Title and Text", async () => {
       await siteUrl.open("auth/login");
       await expect(browser).toHaveTitle("OrangeHRM");
       //let ele=await loginPage.loginVisibleText();
@@ -72,7 +72,7 @@ credentials.forEach(({ username, password, invusername, invpassword }) => {
      
     });
 
-    it.only("Login with inValid credentials to OrangeHRM", async () => {
+    it("Login with inValid credentials to OrangeHRM", async () => {
       await siteUrl.open("auth/login");
       await loginPage.login(invusername, invpassword);
       await clickBtn(await loginPage.submitButton);
