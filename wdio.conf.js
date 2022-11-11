@@ -260,8 +260,9 @@ exports.config = {
     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
         if (error) {
             await browser.takeScreenshot();
+           // test\screenshots\months\Apr
             //await browser.saveScreenshot(`./test/screenshots/error${rnd}.png`);
-            await browser.saveScreenshot(`./test/screenshots/Months${monthname}_${currentdate}_${time}.png`);
+            await browser.saveScreenshot(`./test/screenshots/months/${monthname}/${currentdate}_${time}.png`);
         }
     },
 
