@@ -20,9 +20,9 @@ class commonFn {
     
   }
 
-  async waitTime(timeouts) {
+  async waitTime(time) {
     try{
-      await this.waitForDisplayed({timeout:timeouts});
+      await this.waitForDisplayed({timeout:time});
     }
     catch(error){
       console.log(error+" "+ "selector is not found");

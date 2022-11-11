@@ -7,6 +7,12 @@ class leftNavigationpanel{
     get PIMtab(){
         return $("//span[text()='PIM']");
     }
+    get Configuration(){
+        return $("//span[text()='Configuration ']");
+    }
+    get dataImport(){
+        return $("//a[text()='Data Import']");
+    }
     
 
     async leftNav_Admin(){
@@ -17,6 +23,7 @@ class leftNavigationpanel{
     async leftNav_PIM(){
         await this.PIMtab.waitForDisplayed({timeout:10000});
         await this.PIMtab.click();
+        
     }
 
 }

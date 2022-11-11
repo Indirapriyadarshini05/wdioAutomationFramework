@@ -1,4 +1,5 @@
 const { assert } = require("chai");
+const { waitTime } = require("../utility/commonFn");
 const expectChai = require("chai").expect;
 
 
@@ -58,12 +59,12 @@ class adminTab {
   get cancelBtn() {
     return $("//button[text()=' Cancel ']");
   }
-  get cancelBtn1() {
+  get saveBtn() {
     return $("//button[text()=' Save ']");
   }
-  get saveBtn() {
-    return $("//button[@type='submit']");
-  }
+  // get saveBtn() {
+  //   return $("//button[@type='submit']");
+  // }
  get jobdd(){
   return $("//span[text()='Job ']");
  }
@@ -88,14 +89,9 @@ async addJobTitle(){
  await (await this.description).setValue("tester description");
 
 }
-
-
-
-
-
   async addUser(uname) {
     await this.addBtn.click();
-    await this.addUserText.waitForDisplayed({ timeout: 10000 });
+    await waitTime('10000');
      let text = await this.addUserText.getText();
      console.log(text);
     await this.userRole.click();
@@ -107,13 +103,6 @@ async addJobTitle(){
     await this.userName.setValue(uname);
     await this.password.setValue("Admin@123");
     await this.confirmPassword.setValue("Admin@123");
-     await (await this.cancelBtn1).click();
-     
-    // await this.cancelBtn.click();
-   //  await (await this.systemUsersText).waitForDisplayed({timeout:5000});
-
- 
-      
   }
 
   async searchUser(uname) {
@@ -121,7 +110,9 @@ async addJobTitle(){
     await this.userName.setValue(uname);
     await this.userRole.click();
     await this.userRoleddValue.click();
-    await this.empName.setValue(uname);
+    //await this.empName.setValue(uname);
+    await this.empName.setValue("pe");
+    await this.empNameValue.click();
     await this.status.click();
     await this.statusddValue.click();
     await this.search.click();
