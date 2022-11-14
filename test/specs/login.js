@@ -47,6 +47,8 @@ credentials.forEach(({ username, password, invusername, invpassword }) => {
       await inputfile.addValue(fileUploading);
       await clickBtn(await PIMtab.uploadbtn);
       await logout_Fn.logout();
+      await browser.pause(2000);
+
     });
 
 
@@ -61,6 +63,7 @@ credentials.forEach(({ username, password, invusername, invpassword }) => {
       await expectChai(text).to.equal("Employee Information");
       await leftNavigationpanel.leftNav_Admin();
       await logout_Fn.logout();
+      await browser.pause(2000);
      
     });
 
@@ -81,6 +84,7 @@ credentials.forEach(({ username, password, invusername, invpassword }) => {
       await admin.addUser(nameofuser, password);
       await clickBtn(await admin.saveBtn);
       await logout_Fn.logout();
+      await browser.pause(2000);
       // await browser.pause(2000);
       // let ele = await $("//p[text()='Successfully Saved']");
       // let ele2 = await ele.getText();
@@ -95,6 +99,7 @@ credentials.forEach(({ username, password, invusername, invpassword }) => {
       //await clickBtn(await loginPage.submitButton)
       await admin.searchUser(nameofuser);
       await logout_Fn.logout();
+      await browser.pause(2000);
     });
 
     it("Adding jobtitle in Admin Tab -job section", async () => {

@@ -77,30 +77,30 @@ describe('Calling methods in Api', () => {
             })
             .then(data => console.log(data));
     })
-    it.only("POST", async () => {
-        let PostRequest = () => {
+    // it.only("POST", async () => {
+    //     let PostRequest = () => {
 
-            fetch("https://reqres.in/api/users/2", {
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json"
-                },
-                method: "POST",
-                body: JSON.stringify({
-                    email: "hello@geeky2.com",
-                    first_name: "Geeky1234"
-                })
-            }).then(function (response) {
-                  console.log(response.headers)
-                return response.json();
-            }).then(function (data) {
-                 console.log(data);
+    //         fetch("https://reqres.in/api/users/2", {
+    //             headers: {
+    //                 Accept: "application/json",
+    //                 "Content-Type": "application/json"
+    //             },
+    //             method: "POST",
+    //             body: JSON.stringify({
+    //                 email: "hello@geeky2.com",
+    //                 first_name: "Geeky1234"
+    //             })
+    //         }).then(function (response) {
+    //               console.log(response.headers)
+    //             return response.json();
+    //         }).then(function (data) {
+    //              console.log(data);
                  
-                // console.log(this.data.id); 
+    //             // console.log(this.data.id); 
 
-            });
-        };
-        PostRequest();
-    });
+    //         });
+    //     };
+    //     PostRequest();
+    // });
 });
 
